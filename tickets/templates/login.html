@@ -41,7 +41,7 @@ async function login() {
     });
 
     const data = await response.json();
-    console.log(text);
+    
 
     if (data.access) {
         localStorage.setItem("access", data.access);
