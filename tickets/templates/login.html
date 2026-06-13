@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<div class="container">
+<h1 style="font-style: italic; text-align:center; font-family:san-serif; color:rgb(150, 13, 86)">AI SUPPORT TICKET SYSTEM</h1>
+<h2 style="margin-left: 5%;">Login</h2>
+
+<input id="username" placeholder="Username">
+<input id="password" type="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<p style="text-align: center;">
+    Don't have an account?
+    <a href="/register.html">Register</a>
+</p>
+<p style="text-align:center; margin-top:10px;">
+    <a href="/admin_login.html">
+        🔐 Admin Login
+    </a>
+</p>
+</div>
+
+<script>
+async function login() {
+
+    const response = await fetch("/api/token/", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+            username: document.getElementById("username").value,
+            password: document.getElementById("password").value
+        })
+    });
+
+    const data = await response.json();
+
+    if (data.access) {
+        localStorage.setItem("access", data.access);
+        localStorage.setItem("refresh", data.refresh);
+
+        window.location.href = "/dashboard.html";
+    } else {
+        alert("Invalid login");
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="top-bar">
+    <h2>AI Support Dashboard</h2>
+
+    <button class="btn btn-logout" onclick="logout()">
+        Logout
+    </button>
+</div>
+<h2>Create Ticket</h2>
+
+<input id="title" placeholder="Title">
+<textarea id="description" placeholder="Description"></textarea>
+
+<button class="btn btn-create" onclick="createTicket()">
+    Create Ticket
+</button>
+
+<button class="btn btn-view"
+        onclick="window.location.href='/view_tickets.html'">
+    View All Tickets
+</button>
+
+<hr>
+
+<h3 id="latestTitle" style="display:none;">Your Ticket</h3>
+
+<div id="latestTicket"></div>
+
+</div>
+
+<script src="/static/js/dashboard.js"></script>
+
+</body>
+</html>

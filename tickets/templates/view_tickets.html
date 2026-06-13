@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Tickets</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-bar">
+        <h2>All Tickets</h2>
+
+        <button class="btn btn-view"
+                onclick="window.location.href='/dashboard.html'">
+            Back to Dashboard
+        </button>
+    </div>
+
+    <div id="ticketList"></div>
+
+</div>
+
+<script src="{% static 'js/view_tickets.js' %}"></script>
+
+</body>
+</html>

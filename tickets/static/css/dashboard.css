@@ -1,0 +1,198 @@
+/* PAGE */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f7fb;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* HEADER */
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.top-bar h2 {
+    margin: 0;
+    color: #222;
+}
+
+/* INPUTS */
+
+input,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* BUTTONS */
+
+.btn {
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-create {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-create:hover {
+    background: #1d4ed8;
+}
+
+.btn-view {
+    background: #10b981;
+    color: white;
+}
+
+.btn-view:hover {
+    background: #059669;
+}
+
+.btn-logout {
+    background: #ef4444;
+    color: white;
+}
+
+.btn-logout:hover {
+    background: #dc2626;
+}
+
+/* LATEST TICKET SECTION */
+
+.ticket-card {
+    margin-top: 20px;
+    background: #ffffff;
+    border-left: 6px solid #2563eb;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticket-header h3 {
+    margin: 0;
+    color: #222;
+}
+
+.desc {
+    color: #555;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.meta {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #444;
+}
+
+/* AI RESPONSE */
+
+.ai-box {
+    margin-top: 15px;
+    background: #eef6ff;
+    border-left: 4px solid #2563eb;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.ai-box b {
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* STATUS BADGES */
+
+.status {
+    
+    border-radius: 20px;
+    color: rgb(29, 25, 25);
+    font-size: 17px;
+    font-weight: bold;
+    margin-right: 7px;
+    
+    
+}
+.user-header {
+    cursor: pointer;
+    background: #e0e7ff;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.tickets-container {
+    margin-left: 15px;
+}
+
+.ticket-card {
+    margin: 10px 0;
+}
+
+.status.open {
+    background: #ffffff;
+}
+
+.status.in_progress {
+    background: #ffff;
+}
+
+.status.resolved {
+    background: #ffff;
+}
+
+hr {
+    margin: 25px 0;
+    border: none;
+    border-top: 1px solid #eee;
+}
+.delete-btn {
+    margin-top: 15px;
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}

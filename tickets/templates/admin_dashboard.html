@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+<h2>Admin Ticket Panel</h2>
+<input id="searchBox" placeholder="Search by user or title..." onkeyup="filterTickets()">
+<div id="adminTickets"></div>
+
+</div>
+
+<script src="/static/js/admin_dashboard.js"></script>
+
+</body>
+</html>

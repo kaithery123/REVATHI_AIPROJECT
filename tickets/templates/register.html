@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h2 style="text-align: center;">Register</h2>
+
+<input id="username" placeholder="Username">
+<input id="email" placeholder="Email">
+<input id="password" type="password" placeholder="Password">
+
+<button onclick="register()">Register</button>
+
+<p style="text-align: center;">
+    Already have account?
+    <a href="/login.html">Login</a>
+</p>
+
+</div>
+
+<script>
+async function register() {
+
+    const response = await fetch("/api/register/", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            username: document.getElementById("username").value,
+            email: document.getElementById("email").value,
+            password: document.getElementById("password").value
+        })
+    });
+
+    const data = await response.json();
+
+    console.log("STATUS:", response.status);
+    console.log("DATA:", data);
+
+    if (response.ok) {
+        alert("Registered successfully");
+        window.location.href = "/login.html";
+    } else {
+        alert(JSON.stringify(data));
+    }
+}
+</script>
+
+</body>
+</html>

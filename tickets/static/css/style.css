@@ -1,0 +1,108 @@
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f7fb;
+}
+
+.container {
+    width: 430px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+    width: 90%;
+    margin: 9px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 5%;
+}
+
+button {
+    padding: 10px;
+    width: 60%;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-left: 20%;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+.card {
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 5px solid green;
+    margin-top: 10px;
+}
+.ticket-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-left: 5px solid #4CAF50;
+}
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticket-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.desc {
+    margin-top: 10px;
+    color: #555;
+}
+
+.meta {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #444;
+}
+
+.ai-box {
+    margin-top: 12px;
+    padding: 10px;
+    background: #f4f8ff;
+    border-radius: 8px;
+    border-left: 4px solid #2196f3;
+}
+
+.ai-box p {
+    margin: 5px 0 0;
+    color: #333;
+}
+
+/* STATUS COLORS */
+.status {
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 10px;
+    color: white;
+}
+
+.status.open {
+    background: orange;
+}
+
+.status.in_progress {
+    background: #2196f3;
+}
+
+.status.resolved {
+    background: green;
+}
