@@ -28,7 +28,11 @@ SECRET_KEY = 'django-insecure-&ox)e5g-x9_bo&bm8_+kctvi&kvi-tyd3ac_#!@6-r6k)t-86b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "revathi-aiproject-1.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
 
 
 # Application definition
