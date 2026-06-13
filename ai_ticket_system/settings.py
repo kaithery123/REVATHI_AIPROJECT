@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-&ox)e5g-x9_bo&bm8_+kctvi&kvi-tyd3ac_#!@6-r6k)t-86b
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "*"
+   
 ]
 
 
@@ -59,7 +59,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 ROOT_URLCONF = 'ai_ticket_system.urls'
 
 TEMPLATES = [
@@ -85,12 +85,12 @@ WSGI_APPLICATION = 'ai_ticket_system.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-        'PORT': config('DB_PORT'),
+       'ENGINE': 'django.db.backends.postgresql',
+        'NAME':  'supportdb',
+        'USER':'postgres',
+        'PASSWORD':'revathi123',
+        'HOST':'localhost',
+        'PORT':''
     }
 }
 
@@ -136,7 +136,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 import os
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
