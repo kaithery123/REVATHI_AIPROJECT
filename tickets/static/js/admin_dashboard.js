@@ -95,6 +95,8 @@ function filterTickets() {
 }
 async function deleteTicket(id) {
 
+    const token = localStorage.getItem("access"); // 👈 ADD THIS
+
     const response = await fetch(`/api/tickets/${id}/`, {
         method: "DELETE",
         headers: {
@@ -104,8 +106,6 @@ async function deleteTicket(id) {
 
     if (response.ok) {
         alert("Ticket deleted");
-
-        
         loadAdminTickets();
     } else {
         alert("Failed to delete");
