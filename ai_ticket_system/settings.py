@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
-
+from decouple import config
 
 
 
@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-&ox)e5g-x9_bo&bm8_+kctvi&kvi-tyd3ac_#!@6-r6k)t-86b
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "revathi-aiproject-22.onrender.com"
+    "revathi-aiproject-88.onrender.com"
     "localhost",
     "127.0.0.1",
 ]
@@ -87,13 +87,14 @@ WSGI_APPLICATION = 'ai_ticket_system.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'supportdb',
-        'USER': 'postgres',
-        'PASSWORD': 'revathi123',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
     }
 }
+
 
 
 # Password validation
