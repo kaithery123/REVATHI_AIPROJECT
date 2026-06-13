@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-&ox)e5g-x9_bo&bm8_+kctvi&kvi-tyd3ac_#!@6-r6k)t-86b
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "revathi-aiproject-9.onrender.com",
+    "revathi-aiproject-8.onrender.com",
     "localhost",
     "127.0.0.1",
 ]
@@ -77,9 +77,7 @@ TEMPLATES = [
         },
     },
 ]
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',
-]
+
 WSGI_APPLICATION = 'ai_ticket_system.wsgi.application'
 
 
